@@ -2,7 +2,7 @@ title:              Bündnis gegen Antisemitismus Lübeck
 email:              BgA-Luebeck@t-online.de
 description:        Homepage des Bündnis gegen Antisemitismus Lübeck
 author:             BgA-Lübeck
-baseurl:
+baseurl:            "/about"
 url:                "https://bga-luebeck.github.io"
 
 # Social Profiles
