@@ -1,14 +1,14 @@
-title:              Clean Blog
-email:              your-email@example.com
-description:        A Blog Theme by Start Bootstrap
-author:             Start Bootstrap
+title:              Bündnis gegen Antisemitismus Lübeck
+email:              BgA-Luebeck@t-online.de
+description:        Homepage des Bündnis gegen Antisemitismus Lübeck
+author:             BgA-Lübeck
 baseurl:            "/startbootstrap-clean-blog-jekyll"
-url:                "https://startbootstrap.github.io"
+url:                "https://bga-luebeck.github.io"
 
 # Social Profiles
-twitter_username:   SBootstrap
-github_username:    StartBootstrap
-facebook_username:  StartBootstrap
+twitter_username:
+github_username:    bga-luebeck
+facebook_username:
 instagram_username:  
 linkedin_username:
 
