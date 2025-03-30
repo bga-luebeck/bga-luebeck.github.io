@@ -21,7 +21,7 @@ background: '/img/bga-logo.jpg'
     {% else %}
     {{ site.author }}
     {% endif %}
-    am {{ post.date | date: '%d %B, %Y' }} &middot; {% include read_time.html content=post.content %}
+    am {{ post.date | date: '%d. %B, %Y' }} &middot; {% include read_time.html content=post.content %}
   </p>
 </article>
 
