@@ -6,41 +6,12 @@ background: '/img/bga-logo.jpg'
 form: true
 ---
 
+<p>Fragen oder sonstige Anliegen? Nutzen Sie gerne das Kontaktformular, um mit dem BgA Lübeck in Verbindung zu treten.</p>
 
 <form action="https://formspree.io/f/xnnpbozo" method="POST">
-<p>Fragen oder sonstige Anliegen? Nutzen Sie gerne das Kontaktformular, um mit dem BgA Lübeck in Verbindung zu treten.</p>
-<form name="sentMessage" id="contactForm" novalidate>
-  <div class="control-group">
-    <div class="form-group floating-label-form-group controls">
-      <label>Name</label>
-      <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Bitte geben Sie Ihren Namen an.">
-      <p class="help-block text-danger"></p>
-    </div>
-  </div>
-  <div class="control-group">
-    <div class="form-group floating-label-form-group controls">
-      <label>Email Adresse</label>
-      <input type="email" class="form-control" placeholder="Email Adresse" id="email" required data-validation-required-message="Bitte geben Sie Ihre E-Mail Adresse an.">
-      <p class="help-block text-danger"></p>
-    </div>
-  </div>
-  <div class="control-group">
-    <div class="form-group col-xs-12 floating-label-form-group controls">
-      <label>Telefonnummer</label>
-      <input type="tel" class="form-control" placeholder="Telefonnummer" id="phone" required data-validation-required-message="Bitte geben Sie Ihre Telefonnummer an.">
-      <p class="help-block text-danger"></p>
-    </div>
-  </div>
-  <div class="control-group">
-    <div class="form-group floating-label-form-group controls">
-      <label>Nachricht</label>
-      <textarea rows="5" class="form-control" placeholder="Nachricht" id="message" required data-validation-required-message="Bitte geben Sie eine Nachricht ein."></textarea>
-      <p class="help-block text-danger"></p>
-    </div>
-  </div>
-  <br>
-  <div id="success"></div>
-  <div class="form-group">
-    <button type="submit" class="btn btn-primary" id="sendMessageButton">Absenden</button>
-  </div>
+  <label>Name:<input type="text" name="email"></label>
+  <label>E-Mail:<input type="email" name="email"></label>
+  <label>Nachricht:<textarea name="message"></textarea></label>
+  <label>Telefonnummer:<input type="tel" name="email"></label>
+  <button type="submit">Absenden</button>
 </form>
