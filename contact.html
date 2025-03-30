@@ -8,45 +8,47 @@ form: true
 
 <p>Fragen oder sonstige Anliegen? Nutzen Sie gerne das Formular, um das BgA Lübeck zu kontaktieren.</p>
 
-<form action="https://formspree.io/f/xnnpbozo" method="POST" id="contactForm" name="sentMessage" novalidate>
+<form action="https://formspree.io/f/xnnpbozo" method="POST">
 
-  <div class="control-group">
-    <div class="form-group floating-label-form-group controls">
-      <label>Name</label>
-      <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Bitte geben Sie Ihren Namen an." name="name">
-      <p class="help-block text-danger"></p>
-    </div>
+  <div class="form-group mb-3">  <label for="contactName">Name</label>
+    <input type="text"
+           class="form-control"
+           id="contactName"
+           name="name"
+           placeholder="Ihr Name"
+           required>
+     </div>
+
+  <div class="form-group mb-3">
+    <label for="contactEmail">E-Mail Adresse</label>
+    <input type="email"
+           class="form-control"
+           id="contactEmail"
+           name="_replyto"
+           placeholder="ihre.email@beispiel.de"
+           required>
+     </div>
+
+  <div class="form-group mb-3">
+    <label for="contactPhone">Telefonnummer (Optional)</label>
+    <input type="tel"
+           class="form-control"
+           id="contactPhone"
+           name="phone"
+           placeholder="Ihre Telefonnummer">
   </div>
 
-  <div class="control-group">
-    <div class="form-group floating-label-form-group controls">
-      <label>Email Address</label>
-      <input type="email" class="form-control" placeholder="Email Adresse" id="email" required data-validation-required-message="Bitte geben Sie Ihre E-Mail Adresse an." name="_replyto">
-      <p class="help-block text-danger"></p>
-    </div>
-  </div>
+  <div class="form-group mb-3">
+    <label for="contactMessage">Nachricht</label>
+    <textarea class="form-control"
+              id="contactMessage"
+              name="message"
+              rows="5"
+              placeholder="Ihre Nachricht an uns"
+              required></textarea>
+     </div>
 
-  <div class="control-group">
-    <div class="form-group col-xs-12 floating-label-form-group controls">
-      <label>Phone Number</label>
-      <input type="tel" class="form-control" placeholder="Telefonnummer (Optional)" id="phone" name="phone">
-      <p class="help-block text-danger"></p> </div>
-  </div>
-
-  <div class="control-group">
-    <div class="form-group floating-label-form-group controls">
-      <label>Message</label>
-      <textarea rows="5" class="form-control" placeholder="Nachricht" id="message" required data-validation-required-message="Bitte geben Sie eine Nachricht ein." name="message"></textarea>
-      <p class="help-block text-danger"></p>
-    </div>
-  </div>
-
-  <br>
-
-  <div id="success"></div>
-
-  <div class="form-group">
-    <button type="submit" class="btn btn-primary" id="sendMessageButton">Absenden</button>
+  <div class="form-group text-center"> <button type="submit" class="btn btn-primary">Absenden</button>
   </div>
 
 </form>
