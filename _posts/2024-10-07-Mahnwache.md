@@ -35,7 +35,7 @@ Diese Ereignisse mahnen uns, nicht zu schweigen und gemeinsam gegen jede Form vo
 
 Wir, das Bündnis gegen Antisemitismus Lübeck, rufen daher zu einer Mahnwache auf, um ein starkes Zeichen gegen Antisemitismus, Antizionismus und Islamismus zu setzen und unsere Solidarität mit Israel zu bekunden und die Freilassung der israelischen Geiseln zu fordern.
 
-## Warum ist diese Mahnwache wichtig? {:.section-heading}
+## Warum ist diese Mahnwache wichtig?
 
 * Gedenken: Wir erinnern an die Opfer des Angriffs und zeigen unsere Anteilnahme.
 * Solidarität: Wir stehen an der Seite Israels und aller Menschen, die von Hass und Gewalt betroffen sind.
@@ -57,6 +57,6 @@ Die Mahnwache findet hier statt:
         referrerpolicy="no-referrer-when-downgrade">
 </iframe>
 
-Mit solidarischen Grüßen
+Mit solidarischen Grüßen,
 
 Bündnis gegen Antisemitismus Lübeck
