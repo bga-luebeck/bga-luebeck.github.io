@@ -9,11 +9,11 @@ background: '/img/bga-logo.jpg'
 Liebe Mitbürgerinnen und Mitbürger,
 am 07. Oktober 2023 verübte die Hamas einen groß angelegten Angriff auf Israel.
 Dieser Angriff umfasste Raketenbeschuss auf zivile Gebiete sowie bewaffnete Übergriffe auf Grenzposten und Siedlungen.
-Allein beim Supernova-Festival im Süden Israels, bei dem junge Menschen aus aller Welt friedlich feierten, wurden mehr als 360 Party-Besucher getötet, vergewaltigt und schwer ver-letzt.
+Allein beim Supernova-Festival im Süden Israels, bei dem junge Menschen aus aller Welt friedlich feierten, wurden mehr als 360 Party-Besucher getötet, vergewaltigt und schwer verletzt.
 Auch in anderen Landesteilen kam es zu Massakern und Geiselnahmen, bei denen Zivilisten und Soldaten brutal ermordet oder entführt wurden.
 
 Die Hamas, eine militante islamistische Organisation, die von vielen Ländern als terroristische Gruppe eingestuft wird, hat in der Vergangenheit wiederholt Angriffe auf Israel durchgeführt.
-Diese Angriffe umfassen Raketenbeschuss auf zivile Gebiete, Selbstmordattentate und bewaffnete Über-griffe, die zahlreiche unschuldige Menschenleben gefordert haben.
+Diese Angriffe umfassen Raketenbeschuss auf zivile Gebiete, Selbstmordattentate und bewaffnete Übergriffe, die zahlreiche unschuldige Menschenleben gefordert haben.
 
 Die Hamas lehnt das Existenzrecht Israels ab und strebt die Zerstörung des jüdischen Staates an.
 Diese Haltung steht im Widerspruch zu den grundlegenden Prinzipien des Völkerrechts und der internationalen Gemeinschaft, die das Recht jedes Staates auf Existenz und Selbstverteidigung anerkennt.
@@ -31,7 +31,7 @@ Antisemitismus, der Hass und die Diskriminierung gegenüber Juden, sowie Antizio
 
 In Deutschland sehen wir die Auswirkungen dieser globalen Konflikte in Form von wachsendem Antisemitismus und zunehmender Gewalt gegen jüdische Gemeinden. Es ist daher unerlässlich, dass wir uns entschieden gegen diese Ideologien und ihre Unterstützer stellen, um Frieden und Sicherheit für alle Menschen zu erreichen.
 
-Diese Ereignisse mahnen uns, nicht zu schweigen und gemeinsam gegen jede Form von Hass und Gewalt einzutreten. Besonders besorgniserregend ist die Gefahr für Juden in Deutschland, die so-wohl von linken, rechten als auch islamistischen Gewalttätern ausgeht. Zudem beobachten wir eine besorgniserregende Tendenz zur Opfer-Täter-Umkehr, bei der die Opfer von Gewalt und Terror zu Tätern stilisiert werden.
+Diese Ereignisse mahnen uns, nicht zu schweigen und gemeinsam gegen jede Form von Hass und Gewalt einzutreten. Besonders besorgniserregend ist die Gefahr für Juden in Deutschland, die sowohl von linken, rechten als auch islamistischen Gewalttätern ausgeht. Zudem beobachten wir eine besorgniserregende Tendenz zur Opfer-Täter-Umkehr, bei der die Opfer von Gewalt und Terror zu Tätern stilisiert werden.
 
 Wir, das Bündnis gegen Antisemitismus Lübeck, rufen daher zu einer Mahnwache auf, um ein starkes Zeichen gegen Antisemitismus, Antizionismus und Islamismus zu setzen und unsere Solidarität mit Israel zu bekunden und die Freilassung der israelischen Geiseln zu fordern.
 
