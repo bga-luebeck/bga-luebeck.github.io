@@ -2,7 +2,7 @@
 layout: post
 title: "Infostand"
 subtitle:
-date: 2024-11-10 10:45:13 -0400
+date: 2024-11-10 10:45:13 +0100
 background: '/img/bga-logo.jpg'
 ---
 
