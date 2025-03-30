@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 297 210"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   sodipodi:docname="bga-logo.svg"
+   inkscape:export-filename="bga-logo.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.70555556"
+     inkscape:cx="460.62992"
+     inkscape:cy="435.11811"
+     inkscape:window-width="1920"
+     inkscape:window-height="995"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <linearGradient
+       id="swatch13"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop13" />
+    </linearGradient>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter13"
+       x="-9.2626343e-06"
+       y="-4.7241904e-05"
+       width="1.0000185"
+       height="1.0000945">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.00025265445"
+         id="feGaussianBlur13" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#swatch13"
+       id="linearGradient18"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-57.75,25.5)"
+       x1="134.34894"
+       y1="102.23807"
+       x2="257.95888"
+       y2="102.23807" />
+  </defs>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g16"
+       transform="translate(-5.25,6.7499999)"
+       style="opacity:0.5">
+      <path
+         style="fill:none;stroke:#0066ff;stroke-width:5.041;stroke-dasharray:none"
+         d="M 31.323856,71.820934 H 122.80013 L 77.23928,145.0074 Z"
+         id="path1"
+         sodipodi:nodetypes="cccc" />
+      <path
+         style="fill:none;stroke:#0066ff;stroke-width:5.041;stroke-dasharray:none"
+         d="M 122.77957,121.5542 H 31.303293 L 76.86415,48.367879 Z"
+         id="path2"
+         sodipodi:nodetypes="cccc" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:'Arial Black';-inkscape-font-specification:'Arial Black, ';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;mix-blend-mode:normal;fill:#000000;stroke:none;stroke-width:5.597;stroke-dasharray:none;filter:url(#filter13)"
+       x="150.73515"
+       y="87.91806"
+       id="text2"><tspan
+         sodipodi:role="line"
+         id="tspan2"
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.7px;font-family:montserrat;-inkscape-font-specification:'montserrat Bold Italic';text-align:center;text-anchor:middle;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:5.597;stroke-dasharray:none;paint-order:markers fill stroke"
+         x="150.73515"
+         y="87.91806">Bündnis gegen </tspan><tspan
+         sodipodi:role="line"
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.7px;font-family:montserrat;-inkscape-font-specification:'montserrat Bold Italic';text-align:center;text-anchor:middle;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:5.597;stroke-dasharray:none;paint-order:markers fill stroke"
+         x="150.73515"
+         y="104.07899"
+         id="tspan3">Antisemitismus</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.9333px;font-family:'Arial Black';-inkscape-font-specification:'Arial Black, ';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;mix-blend-mode:normal;fill:#000000;stroke:none;stroke-width:5.597;stroke-dasharray:none;filter:url(#filter13)"
+       x="149.23515"
+       y="121.29306"
+       id="text19"><tspan
+         sodipodi:role="line"
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16.9333px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold Italic';text-align:center;text-anchor:middle;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:5.597;stroke-dasharray:none;paint-order:markers fill stroke"
+         x="149.23515"
+         y="121.29306"
+         id="tspan19">Lübeck</tspan></text>
+  </g>
+</svg>
