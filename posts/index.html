@@ -36,11 +36,11 @@ background: '/img/bga-logo.jpg'
 
   {% if paginator.previous_page %}
   <a class="btn btn-primary float-left" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;
-    Newer<span class="d-none d-md-inline"> Posts</span></a>
+    Neuere<span class="d-none d-md-inline"> Beiträge</span></a>
   {% endif %}
 
   {% if paginator.next_page %}
-  <a class="btn btn-primary float-right" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older<span class="d-none d-md-inline"> Posts</span> &rarr;</a>
+  <a class="btn btn-primary float-right" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Ältere<span class="d-none d-md-inline"> Beiträge</span> &rarr;</a>
   {% endif %}
 
 </div>
