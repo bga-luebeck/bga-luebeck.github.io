@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="148mm"
-   height="105mm"
-   viewBox="0 0 148 105"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
    version="1.1"
    id="svg1"
    inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
@@ -28,8 +28,8 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="0.70555556"
-     inkscape:cx="449.29134"
-     inkscape:cy="327.40157"
+     inkscape:cx="171.49606"
+     inkscape:cy="518.74015"
      inkscape:window-width="1920"
      inkscape:window-height="995"
      inkscape:window-x="0"
@@ -47,6 +47,19 @@
          offset="0"
          id="stop13" />
     </linearGradient>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter13"
+       x="-5.3234166e-06"
+       y="-4.5043224e-05"
+       width="1.0000106"
+       height="1.0000901">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.00025265445"
+         id="feGaussianBlur13" />
+    </filter>
     <linearGradient
        inkscape:collect="always"
        xlink:href="#swatch13"
@@ -64,7 +77,7 @@
      id="layer1">
     <g
        id="g16"
-       transform="matrix(0.54726831,0,0,0.54726831,-4.0075465,-14.380487)"
+       transform="matrix(0.54726831,0,0,0.54726831,-6.6325465,-1.2554871)"
        style="opacity:0.5">
       <path
          style="fill:none;stroke:#0066ff;stroke-width:5.041;stroke-dasharray:none"
@@ -77,5 +90,34 @@
          id="path2"
          sodipodi:nodetypes="cccc" />
     </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:'Arial Black';-inkscape-font-specification:'Arial Black, ';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;mix-blend-mode:normal;fill:#000000;stroke:none;stroke-width:5.597;stroke-dasharray:none;filter:url(#filter13)"
+       x="150.73515"
+       y="87.91806"
+       id="text2"
+       transform="matrix(0.54726831,0,0,0.54726831,1.4906121,-1.1995481)"><tspan
+         sodipodi:role="line"
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.7px;font-family:montserrat;-inkscape-font-specification:'montserrat Bold Italic';text-align:center;text-anchor:middle;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:5.597;stroke-dasharray:none;paint-order:markers fill stroke"
+         x="150.73515"
+         y="87.91806"
+         id="tspan3">Gegen jeden </tspan><tspan
+         sodipodi:role="line"
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.7px;font-family:montserrat;-inkscape-font-specification:'montserrat Bold Italic';text-align:center;text-anchor:middle;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:5.597;stroke-dasharray:none;paint-order:markers fill stroke"
+         x="152.53221"
+         y="104.07899"
+         id="tspan1">Antisemitismus - </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.9333px;font-family:'Arial Black';-inkscape-font-specification:'Arial Black, ';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;mix-blend-mode:normal;fill:#000000;stroke:none;stroke-width:5.597;stroke-dasharray:none;filter:url(#filter13)"
+       x="149.23515"
+       y="121.29306"
+       id="text19"
+       transform="matrix(0.54726831,0,0,0.54726831,1.4906121,-1.1995481)"><tspan
+         sodipodi:role="line"
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16.9333px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold Italic';text-align:center;text-anchor:middle;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:5.597;stroke-dasharray:none;paint-order:markers fill stroke"
+         x="149.23515"
+         y="121.29306"
+         id="tspan19">immer und überall!</tspan></text>
   </g>
 </svg>
