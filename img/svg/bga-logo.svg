@@ -2,14 +2,14 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="297mm"
-   height="210mm"
-   viewBox="0 0 297 210"
+   width="148mm"
+   height="105mm"
+   viewBox="0 0 148 105"
    version="1.1"
    id="svg1"
    inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
    sodipodi:docname="bga-logo.svg"
-   inkscape:export-filename="../bga-logo.png"
+   inkscape:export-filename="/home/max/Projects/bga-logo.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -68,7 +68,7 @@
        gradientTransform="translate(-57.75,25.5)"
        x1="134.34894"
        y1="102.23807"
-       x2="257.95888"
+       x2="257.95889"
        y2="102.23807" />
   </defs>
   <g
@@ -77,7 +77,7 @@
      id="layer1">
     <g
        id="g16"
-       transform="matrix(0.54726831,0,0,0.54726831,-4.7575465,-14.005487)"
+       transform="matrix(0.54726831,0,0,0.54726831,-6.6325465,-1.2554871)"
        style="opacity:0.5">
       <path
          style="fill:none;stroke:#0066ff;stroke-width:5.041;stroke-dasharray:none"
@@ -96,7 +96,7 @@
        x="150.73515"
        y="87.91806"
        id="text2"
-       transform="matrix(0.54726831,0,0,0.54726831,-1.8843879,-17.699548)"><tspan
+       transform="matrix(0.54726831,0,0,0.54726831,-3.7593879,-4.9495481)"><tspan
          sodipodi:role="line"
          id="tspan2"
          style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.7px;font-family:montserrat;-inkscape-font-specification:'montserrat Bold Italic';text-align:center;text-anchor:middle;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:5.597;stroke-dasharray:none;paint-order:markers fill stroke"
@@ -113,7 +113,7 @@
        x="149.23515"
        y="121.29306"
        id="text19"
-       transform="matrix(0.54726831,0,0,0.54726831,-1.8843879,-17.699548)"><tspan
+       transform="matrix(0.54726831,0,0,0.54726831,-3.7593879,-4.9495481)"><tspan
          sodipodi:role="line"
          style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16.9333px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold Italic';text-align:center;text-anchor:middle;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:5.597;stroke-dasharray:none;paint-order:markers fill stroke"
          x="149.23515"
