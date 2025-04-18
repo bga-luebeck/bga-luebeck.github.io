@@ -4,7 +4,7 @@ title: Veranstaltungen im Mai 2025
 date: 2025-04-18 10:00:00 +0200 # Adjust publication date/time if needed
 categories: [Veranstaltungen, Ankündigungen] # Optional: Add relevant categories
 tags: [Mai, Termine, Lübeck] # Optional: Add relevant tags
-# background: '/img/bga-logo.jpg'
+background: '/img/bga-logo.jpg'
 ---
 
 ## Veranstaltung: „Der Krieg ist aus“, der Nobelpreisträgerhäuser und des Theater Lübeck - 07.05.2025
