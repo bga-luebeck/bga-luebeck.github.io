@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Veranstaltungen im Mai 2025
-date: 2024-04-18 10:00:00 +0200 # Adjust publication date/time if needed
+date: 2025-04-18 10:00:00 +0200 # Adjust publication date/time if needed
 categories: [Veranstaltungen, Ankündigungen] # Optional: Add relevant categories
 tags: [Mai, Termine, Lübeck] # Optional: Add relevant tags
 # background: '/img/bga-logo.jpg'
