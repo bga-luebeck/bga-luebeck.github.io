@@ -44,8 +44,7 @@ referrerpolicy="no-referrer-when-downgrade">
 
 ## Erinnern für die Zukunft - 08.05.2025
 
-![Rund um den 8. Mai findet eine Veranstaltungsreihe zum 80. Jahrestag des Endes des Zweiten Weltkriegs statt. In St. Marien zu Lübeck werden unter anderem drei Ausstellungen gezeigt werden. Copyright: Kirchenkreis Lübeck-Lauenburg
-](/img/posts/erinnern_zukunft.jpg)
+<img alt="Rund um den 8. Mai findet eine Veranstaltungsreihe zum 80. Jahrestag des Endes des Zweiten Weltkriegs statt. In St. Marien zu Lübeck werden unter anderem drei Ausstellungen gezeigt werden. Copyright: Kirchenkreis Lübeck-Lauenburg" height="200" src="/img/posts/erinnern_zukunft.jpg" width="300"/>
 
 Lübeck. Am 8. Mai 2025 jährt sich das Ende des Zweiten Weltkriegs zum 80. Mal. 
 Die Hansestadt Lübeck, der Evangelisch-Lutherische Kirchenkreis Lübeck-Lauenburg, die Kirchengemeinde St. Marien zu Lübeck sowie die Interkulturelle Begegnungsstätte e.V. – Haus der Kulturen, Lübeck, laden zu einer gemeinsamen Gedenkfeier ein. 
