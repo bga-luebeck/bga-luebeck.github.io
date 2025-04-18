@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Impressum
 permalink: /impressum/
 background: '/img/bga-logo.jpg'
 ---
