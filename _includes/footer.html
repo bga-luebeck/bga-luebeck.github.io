@@ -68,7 +68,12 @@
           </li>
           {% endif %}
         </ul>
-        <p class="copyright text-muted">Copyright &copy; {{ site.author }} {{ 'now' | date: "%Y" }}</p>
+        <!-- Impressum link moved inside the copyright paragraph -->
+        <p class="copyright text-muted">
+          Copyright &copy; {{ site.author }} {{ 'now' | date: "%Y" }}
+          &nbsp;|&nbsp; <!-- Separator added -->
+          <a href="{{ '/impressum/' | relative_url }}">Impressum</a>
+        </p>
       </div>
     </div>
   </div>
