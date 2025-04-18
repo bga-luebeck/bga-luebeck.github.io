@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Einladung zum Mitmachen"
-subtitle:
 date: 2025-03-30 21:48:00 +0200
 background: '/img/bga-logo.jpg'
 ---
