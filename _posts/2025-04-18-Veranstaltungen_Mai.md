@@ -18,8 +18,8 @@ Schauspieler:innen des Theaters lesen Texte der drei Nobelpreisträger Thomas Ma
 Die Texte sind mehrheitlich Zeitdokumente von März bis Mai 1945, als Nazideutschland von den Alliierten Siegermächten befreit wurde und am 8. Mai 1945 endgültig kapitulierte. 
 Ein Schwerpunkt der Lesung sind Zeitzeugenberichte über das Kriegsende in Lübeck. 
 Am 2. Mai 1945 besetzten britische Soldaten die Hansestadt.
-Der Eintritt zur Lesung ist frei. Es wird darum gebeten, sich ein kostenloses Ticket unter https://die-luebecker-museen.de/eine-gewisse-genugtuung-ist-das-physische-ueberleben zu reservieren.
-Weitere Informationen finden Sie unter https://die-luebecker-museen.de/.
+Der Eintritt zur Lesung ist frei. Es wird darum gebeten, sich ein [kostenloses Ticket unter diesem Link](https://die-luebecker-museen.de/eine-gewisse-genugtuung-ist-das-physische-ueberleben) zu reservieren.
+Weitere Informationen finden Sie [hier](https://die-luebecker-museen.de/).
 
 Quelle: Die Lübecker Museen
 
@@ -38,7 +38,7 @@ referrerpolicy="no-referrer-when-downgrade">
 </iframe>
 
 * **Eintritt:** kostenlos
-* **Anmeldung:** https://die-luebecker-museen.de/eine-gewisse-genugtuung-ist-das-physische-ueberleben
+* **Anmeldung:** [Lübecker Museen](https://die-luebecker-museen.de/eine-gewisse-genugtuung-ist-das-physische-ueberleben)
 
 ---
 
@@ -70,7 +70,7 @@ Das vollständige Programm wird Ende April vorgestellt.
 
 **Erinnerungskultur stärken und NS-Kontinuität sichtbar machen**  
 Neben dem Gedenken am 8. Mai als Tag der Befreiung von der nationalsozialistischen Diktatur und dem Kriegsende, wird so auch die NS-Kontinuität sichtbar werden – neben vielen zu erwähnenden Aspekten, hier in Bezug auf rechte Gewalt seit 1945“, sagt Joachim Nolte, Beauftragter Kirche gegen Rechtsextremismus des Evangelisch-Lutherischen Kirchenkreises Lübeck-Lauenburg.
-Weitere Informationen und die Programmübersicht finden Sie hier: https://www.kirche-ll.de/8mai.html
+Weitere Informationen und die Programmübersicht finden Sie [hier](https://www.kirche-ll.de/8mai.html).
 
 **Wichtige Details:**
 * **Wann?** 08 Mai, 18 Uhr
