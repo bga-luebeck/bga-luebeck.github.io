@@ -7,7 +7,7 @@ tags: [Mai, Termine, Lübeck] # Optional: Add relevant tags
 background: '/img/bga-logo.jpg'
 ---
 
-## Veranstaltung: „Der Krieg ist aus“, der Nobelpreisträgerhäuser und des Theater Lübeck - 07.05.2025
+## „Der Krieg ist aus!" - Nobelpreisträgerhäuser und Theater Lübeck zum Kriegsende vor 80 Jahren
 
 <img alt="Britische Panzerfahrzeuge vor dem Holstentor (Copyright IWM)" height="400" src="/img/posts/holstentor_panzer.jpg" width="600"/>
 
@@ -42,7 +42,8 @@ referrerpolicy="no-referrer-when-downgrade">
 
 ---
 
-## Erinnern für die Zukunft - 08.05.2025
+
+## Erinnern für die Zukunft
 
 <img alt="Rund um den 8. Mai findet eine Veranstaltungsreihe zum 80. Jahrestag des Endes des Zweiten Weltkriegs statt. In St. Marien zu Lübeck werden unter anderem drei Ausstellungen gezeigt werden. Copyright: Kirchenkreis Lübeck-Lauenburg" height="400" src="/img/posts/erinnern_zukunft.jpg" width="600"/>
 
