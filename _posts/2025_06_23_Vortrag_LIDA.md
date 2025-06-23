@@ -6,7 +6,7 @@ background: '/img/bga-logo.jpg'
 ---
 
 <iframe src="/pdf/Plakat_LIDA.pdf" width="100%" height="600px" style="border: none;">
-    <p>Ihr Browser unterstützt keine eingebetteten PDFs. Sie können das PDF <a href="/pdf/BgA_Einladung.pdf">hier herunterladen</a>.</p>
+    <p>Ihr Browser unterstützt keine eingebetteten PDFs. Sie können das PDF <a href="/pdf/Plakat_LIDA.pdf">hier herunterladen</a>.</p>
 </iframe>
 
 <iframe 
