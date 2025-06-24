@@ -6,7 +6,7 @@ background: '/img/bga-logo.jpg'
 ---
 
 <iframe src="/pdf/Plakat_LIDA.pdf" width="100%" height="1000px" style="border: none;" title="Veranstaltungsplakat als PDF">
-    <p>Veranstaltungsplakat.</p>
+    <p>Veranstaltungsplakat</p>
 </iframe>
 
 <iframe 
