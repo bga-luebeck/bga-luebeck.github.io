@@ -5,8 +5,8 @@ date: 2025-06-22 12:00:00 +0200
 background: '/img/bga-logo.jpg'
 ---
 
-<iframe src="/pdf/Plakat_LIDA.pdf" width="100%" height="1000px" style="border: none;" title="Veranstaltungsplakat als PDF">
-    <p>Ihr Browser unterstützt keine eingebetteten PDFs. Sie können das PDF <a href="/pdf/Plakat_LIDA.pdf">hier herunterladen</a>.</p>
+<iframe 
+src="/pdf/Plakat_LIDA.pdf" width="100%" height="1000px" style="border: none;" title="Veranstaltungsplakat als PDF">
 </iframe>
 
 <iframe 
