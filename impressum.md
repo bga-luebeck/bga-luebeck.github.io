@@ -13,3 +13,8 @@ c/o AutorenServices.de
 Birkenallee 24
 
 36037 Fulda
+
+**Kontakt:**  
+E-Mail: bga-luebeck@t-online.de
+
+Rufnummer: auf Anfrage
