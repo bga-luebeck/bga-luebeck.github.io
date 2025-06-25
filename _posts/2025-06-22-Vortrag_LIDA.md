@@ -5,7 +5,7 @@ date: 2025-06-22 12:00:00 +0200
 background: '/img/bga-logo.jpg'
 ---
 
-<iframe src="/pdf/Plakat_LIDA.pdf" width="100%" height="1000px" style="border: none;">
+<iframe src="/pdf/Plakat_LIDA.pdf" width="100%" height="1100px" style="border: none;">
     <p>Veranstaltungsinformation</p>
 </iframe>
 
