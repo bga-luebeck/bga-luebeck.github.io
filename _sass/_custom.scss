@@ -1,0 +1,36 @@
+//
+// Custom styles for the BGA Lübeck website
+//
+
+// 1. Custom Link Styles
+// Makes links in posts more visible and interactive.
+.post-content a, .page-content a {
+  color: #0056b3; // A standard, accessible blue
+  text-decoration: underline;
+  transition: color 0.2s ease-in-out; // Smooth color change on hover
+
+  &:hover,
+  &:focus {
+    color: #003d80; // A darker blue for hover/focus states
+  }
+}
+
+// 2. Centered Image Figure
+// A reusable class for centering images and their captions.
+.figure-center {
+  text-align: center;
+  margin: 2em 0; // Add some vertical space around the figure
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px; // Slightly rounded corners for a softer look
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); // A subtle shadow for depth
+  }
+
+  figcaption {
+    margin-top: 0.8em;
+    font-size: 0.9em;
+    color: #6c757d; // A muted color for the caption text
+  }
+}

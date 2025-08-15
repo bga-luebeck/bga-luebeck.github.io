@@ -3,3 +3,7 @@
 ---
 
 @import "styles";
+
+// Import custom styles. This should be last to ensure
+// our styles override the theme's defaults.
+@import "custom";
