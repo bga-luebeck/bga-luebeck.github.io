@@ -67,7 +67,7 @@ permalink: /calendar/
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             <h1 class="text-xl font-extrabold text-white tracking-tight">
                 <a href="/" class="hover:text-amber-500 transition duration-300">
-                    <span class="text-amber-400">📅</span> Bildungs-Zeitstrahl
+                    <span class="text-amber-400">📅</span> Zurück zur Webseite
                 </a>
             </h1>
             <nav class="space-x-4">
@@ -198,7 +198,7 @@ permalink: /calendar/
     const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${API_KEY}`;
     const SYSTEM_INSTRUCTION = "Du bist ein historischer Analytiker, spezialisiert auf die Geschichte des Antisemitismus und seine moderne Relevanz. Antworte in klarem, sachlichem Deutsch. Dein Ziel ist es, historische Zusammenhänge respektvoll und lehrreich zu erklären. Die Antwort sollte kurz und auf den Punkt sein (max. 4 Sätze).";
 
-    // --- TIMELINE DATA (UPDATED to include specific months/days and correct order) ---
+    // --- TIMELINE DATA (UPDATED to remove brittle sort function) ---
     const timelineData = [
         // --- Historische Daten (Global & Vornationalstaatlich) ---
         { title: "Erste Blutschuld-Lüge", date: "ca. 1144", context: "Erste dokumentierte Anklage der Blutschuld in Norwich, England. Blutschuld-Mythen wurden später ein zentrales Element antisemitischer Propaganda in Europa.", tags: ["global", "history"] },
@@ -220,13 +220,7 @@ permalink: /calendar/
         { title: "Anschlag auf die Synagoge in Halle", date: "9. Oktober 2019", context: "Rechtsextremistisch motivierter Anschlag auf die Synagoge in Halle (Saale) am Feiertag Jom Kippur. Zwei Menschen wurden außerhalb des Geländes ermordet.", tags: ["germany", "contemporary"] },
         { title: "Hamas-Angriff und Anstieg der Vorfälle", date: "7. Oktober 2023", context: "Angriff der Hamas auf Israel, der weltweit – und insbesondere in Deutschland – zu einem massiven und teils gewalttätigen Anstieg antisemitischer Vorfälle, Demonstrationen und Straftaten führte.", tags: ["global", "contemporary"] },
         { title: "Brandanschlag auf die Synagoge Oldenburg", date: "5. April 2024", context: "Versuchter Brandanschlag auf die Synagoge in Oldenburg. Ein Beispiel für die fortwährende Bedrohung jüdischer Einrichtungen in Deutschland.", tags: ["germany", "contemporary"] }
-    ].sort((a, b) => {
-        // Simple sort function by year/date for display order
-        // This logic is simple and works for the current format, but relies on string comparison.
-        const dateA = a.date.split(' ').pop();
-        const dateB = b.date.split(' ').pop();
-        return dateA.localeCompare(dateB);
-    });
+    ]; // Sortierung entfernt, da die manuelle Sortierung bereits chronologisch ist und die automatische Sortierung zu Fehlern führte.
 
     let currentEvent = null; // Variable to store the currently opened event for LLM context
 
@@ -326,7 +320,7 @@ permalink: /calendar/
         document.getElementById('btn-comparative').onclick = () => generateLlmInsight('comparative');
     }
 
-    // Hauptfunktion zum Rendern des Zeitstrahls (UPDATED to display full date)
+    // Hauptfunktion zum Rendern des Zeitstrahls (Optimeirt für stabile DOM-Erstellung)
     function renderTimeline(filterTag = 'all') {
         const container = document.getElementById('timeline-container');
         container.innerHTML = '';
@@ -360,22 +354,30 @@ permalink: /calendar/
             const cardHtml = `
                 <div class="event-card bg-slate-700 p-4 rounded-lg shadow-lg flex items-start space-x-4 border-l-4 ${event.tags.includes('contemporary') ? 'border-green-500' : 'border-red-500'}">
                     <div class="flex-shrink-0 min-w-[100px] text-right">
-                        <!-- GEÄNDERT: Zeigt jetzt das vollständige Datum an -->
                         <span class="text-lg font-bold text-amber-400">${event.date}</span>
                     </div>
                     <div class="flex-grow">
-                        <h4 class="text-lg font-semibold text-white">${event.title}</h4>
+                        <div class="flex justify-between items-center">
+                            <h4 class="text-lg font-semibold text-white">${event.title}</h4>
+                            <!-- Visueller Klick-Hinweis -->
+                            <span class="text-amber-400 font-bold ml-4">›</span>
+                        </div>
                         <p class="text-gray-400 text-sm mt-1">${event.context.substring(0, 100)}...</p>
                         <span class="text-xs font-medium mt-2 inline-block py-1 px-3 rounded-full ${tagColor} text-white">${tagLabel}</span>
                     </div>
                 </div>
             `;
 
-            const cardElement = document.createElement('div');
-            cardElement.innerHTML = cardHtml;
-            cardElement.firstChild.addEventListener('click', () => showEventDetails(event));
+            // ROBUSTE ELEMENT-ERSTELLUNG:
+            // Wir verwenden einen temporären Container und querySelector, um das Haupt-Element zuverlässig zu extrahieren.
+            const tempWrapper = document.createElement('div');
+            tempWrapper.innerHTML = cardHtml;
+            const clickableCard = tempWrapper.querySelector('.event-card'); // Sicherstellen, dass das DIV und nicht ein Textknoten genommen wird.
 
-            container.appendChild(cardElement);
+            if (clickableCard) {
+                clickableCard.addEventListener('click', () => showEventDetails(event));
+                container.appendChild(clickableCard);
+            }
         });
     }
 
