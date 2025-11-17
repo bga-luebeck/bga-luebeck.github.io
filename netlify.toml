@@ -1,6 +1,7 @@
 [build]
       publish = "_site" # Der Standard-Output-Ordner von Jekyll
       functions = "netlify/functions" # Ordner, in dem sich die Funktionen befinden
+      command = "jekyll build"
 
     # Optional: Wenn Sie spezifische Node.js-Versionen benötigen
     [build.environment]
