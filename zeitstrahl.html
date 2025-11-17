@@ -196,12 +196,13 @@ permalink: /zeitstrahl/
     </footer>
 
 <script>
-    // --- GEMINI API CONFIGURATION ---
-    const API_KEY = ""; // Canvas will provide this key at runtime
-    const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${API_KEY}`;
-    const SYSTEM_INSTRUCTION = "Du bist ein historischer Analytiker, spezialisiert auf die Geschichte des Antisemitismus und seine moderne Relevanz. Antworte in klarem, sachlichem Deutsch. Dein Ziel ist es, historische Zusammenhänge respektvoll und lehrreich zu erklären. Die Antwort sollte kurz und auf den Punkt sein (max. 4 Sätze).";
+    // --- GEMINI API SICHERE KONFIGURATION FÜR NETLIFY PROXY ---
+    // Der Gemini API-Schlüssel wird nun NICHT MEHR im Frontend gespeichert.
+    // Die Anfragen werden an den sicheren Netlify Function Proxy weitergeleitet.
+    const PROXY_URL = '/.netlify/functions/gemini-proxy';
+    // Der System-Prompt und die Ziel-URL sind im Proxy (gemini-proxy.js) definiert.
 
-    // --- TIMELINE DATA (UPDATED to remove brittle sort function) ---
+    // --- TIMELINE DATA (UNVERÄNDERT) ---
     const timelineData = [
         // --- Historische Daten (Global & Vornationalstaatlich) ---
         { title: "Erste Blutschuld-Lüge", date: "ca. 1144", context: "Erste dokumentierte Anklage der Blutschuld in Norwich, England. Blutschuld-Mythen wurden später ein zentrales Element antisemitischer Propaganda in Europa.", tags: ["global", "history"] },
@@ -223,28 +224,19 @@ permalink: /zeitstrahl/
         { title: "Anschlag auf die Synagoge in Halle", date: "9. Oktober 2019", context: "Rechtsextremistisch motivierter Anschlag auf die Synagoge in Halle (Saale) am Feiertag Jom Kippur. Zwei Menschen wurden außerhalb des Geländes ermordet.", tags: ["germany", "contemporary"] },
         { title: "Hamas-Angriff und Anstieg der Vorfälle", date: "7. Oktober 2023", context: "Angriff der Hamas auf Israel, der weltweit – und insbesondere in Deutschland – zu einem massiven und teils gewalttätigen Anstieg antisemitischer Vorfälle, Demonstrationen und Straftaten führte.", tags: ["global", "contemporary"] },
         { title: "Brandanschlag auf die Synagoge Oldenburg", date: "5. April 2024", context: "Versuchter Brandanschlag auf die Synagoge in Oldenburg. Ein Beispiel für die fortwährende Bedrohung jüdischer Einrichtungen in Deutschland.", tags: ["germany", "contemporary"] }
-    ]; // Sortierung entfernt, da die manuelle Sortierung bereits chronologisch ist und die automatische Sortierung zu Fehlern führte.
+    ];
 
-    let currentEvent = null; // Variable to store the currently opened event for LLM context
+    let currentEvent = null;
 
-    // --- LLM GENERATION FUNCTION ---
+    // --- LLM GENERATION FUNCTION (AKTUALISIERT FÜR PROXY) ---
     async function generateLlmInsight(eventType) {
         if (!currentEvent) return;
 
         const outputDiv = document.getElementById('llm-output');
         const eventTitle = currentEvent.title;
-        const eventContext = currentEvent.context;
         const eventDate = currentEvent.date;
-        let userQuery = '';
 
-        // 1. Determine the specific prompt based on button click
-        if (eventType === 'relevance') {
-            userQuery = `Erkläre kurz (max. 4 Sätze), welche historischen Lektionen oder welche aktuelle Relevanz das Ereignis '${eventTitle}' vom ${eventDate} heute für den Kampf gegen Antisemitismus hat. Nutze Google Search Grounding für aktuelle Bezüge.`;
-        } else if (eventType === 'comparative') {
-            userQuery = `Analysiere kurz (max. 4 Sätze), welche Mechanismen oder Muster des Antisemitismus im Ereignis '${eventTitle}' vom ${eventDate} sichtbar werden und ob es vergleichbare historische oder moderne Phänomene gibt. Nutze Google Search Grounding für aktuelle Bezüge.`;
-        }
-
-        // 2. Set loading state
+        // 1. Set loading state
         outputDiv.innerHTML = `
             <div class="flex items-center space-x-2 text-amber-400">
                 <div class="loading-dots flex space-x-1">
@@ -258,7 +250,7 @@ permalink: /zeitstrahl/
         document.querySelectorAll('.llm-btn').forEach(btn => btn.disabled = true);
 
 
-        // 3. API Call with Exponential Backoff
+        // 2. Proxy Call mit Daten-Payload
         const maxRetries = 3;
         let attempts = 0;
         let success = false;
@@ -266,14 +258,14 @@ permalink: /zeitstrahl/
 
         while (attempts < maxRetries && !success) {
             try {
+                // Sende nur die für die Analyse relevanten Daten an den Proxy
                 const payload = {
-                    contents: [{ parts: [{ text: userQuery }] }],
-                    systemInstruction: { parts: [{ text: SYSTEM_INSTRUCTION }] },
-                    // Use Google Search for grounding to ensure accuracy on historical/current topics
-                    tools: [{ "google_search": {} }],
+                    eventTitle: eventTitle,
+                    eventDate: eventDate,
+                    eventType: eventType // 'relevance' or 'comparative'
                 };
 
-                const response = await fetch(API_URL, {
+                const response = await fetch(PROXY_URL, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(payload)
@@ -281,35 +273,32 @@ permalink: /zeitstrahl/
 
                 if (response.ok) {
                     const result = await response.json();
-                    resultText = result.candidates?.[0]?.content?.parts?.[0]?.text || "FEHLER: Die KI konnte keine sinnvolle Antwort generieren.";
+                    resultText = result.text || "FEHLER: Die KI konnte keine sinnvolle Antwort generieren.";
                     success = true;
                 } else if (response.status === 429 && attempts < maxRetries - 1) {
-                    // Handle Rate Limiting (429) with exponential backoff
+                    // Behandle Ratenbegrenzung mit exponentiellem Backoff
                     const delay = Math.pow(2, attempts) * 1000;
                     await new Promise(resolve => setTimeout(resolve, delay));
                 } else {
-                    throw new Error(`API-Fehler: ${response.status} ${response.statusText}`);
+                    const errorJson = await response.json();
+                    throw new Error(`API-Fehler: ${response.status} ${errorJson.error || response.statusText}`);
                 }
             } catch (error) {
                 resultText = `FEHLER: Die Verbindung zum Analyse-Tool ist fehlgeschlagen. (${error.message})`;
-                // Prevent further retries on severe error
                 if (attempts === maxRetries - 1 || error.message.includes('API-Fehler')) break;
             }
             attempts++;
         }
 
-        // 4. Update UI with result
+        // 3. Update UI with result
         outputDiv.innerHTML = resultText;
         document.querySelectorAll('.llm-btn').forEach(btn => btn.disabled = false);
     }
 
-    // --- UI/EVENT HANDLERS (MODIFIED) ---
+    // --- UI/EVENT HANDLERS (UNVERÄNDERT) ---
 
-    // Funktion zur Anzeige der Details im Modal (updated to set currentEvent and attach listeners)
     function showEventDetails(event) {
-        currentEvent = event; // Set global current event for LLM function
-
-        // Clear previous LLM output
+        currentEvent = event;
         document.getElementById('llm-output').innerHTML = '<p class="text-gray-500 italic" id="llm-placeholder">Klicken Sie auf eine der Schaltflächen oben, um eine KI-gestützte Analyse zu erhalten.</p>';
         document.querySelectorAll('.llm-btn').forEach(btn => btn.disabled = false);
 
@@ -318,12 +307,10 @@ permalink: /zeitstrahl/
         document.getElementById('modal-description').textContent = event.context;
         document.getElementById('event-modal').classList.remove('hidden');
 
-        // Attach new LLM event listeners (ensure they are only attached once if possible, but safe to re-attach)
         document.getElementById('btn-relevance').onclick = () => generateLlmInsight('relevance');
         document.getElementById('btn-comparative').onclick = () => generateLlmInsight('comparative');
     }
 
-    // Hauptfunktion zum Rendern des Zeitstrahls (Optimeirt für stabile DOM-Erstellung)
     function renderTimeline(filterTag = 'all') {
         const container = document.getElementById('timeline-container');
         container.innerHTML = '';
@@ -338,7 +325,6 @@ permalink: /zeitstrahl/
         }
 
         filteredData.forEach(event => {
-            // Bestimme die Farbe basierend auf dem Tag
             let tagColor = 'bg-gray-500';
             let tagLabel = 'Historisch';
 
@@ -353,7 +339,6 @@ permalink: /zeitstrahl/
                  tagLabel = 'Global';
             }
 
-            // Erstelle die HTML-Karte
             const cardHtml = `
                 <div class="event-card bg-slate-700 p-4 rounded-lg shadow-lg flex items-start space-x-4 border-l-4 ${event.tags.includes('contemporary') ? 'border-green-500' : 'border-red-500'}">
                     <div class="flex-shrink-0 min-w-[100px] text-right">
@@ -362,7 +347,6 @@ permalink: /zeitstrahl/
                     <div class="flex-grow">
                         <div class="flex justify-between items-center">
                             <h4 class="text-lg font-semibold text-white">${event.title}</h4>
-                            <!-- Visueller Klick-Hinweis -->
                             <span class="text-amber-400 font-bold ml-4">›</span>
                         </div>
                         <p class="text-gray-400 text-sm mt-1">${event.context.substring(0, 100)}...</p>
@@ -371,11 +355,9 @@ permalink: /zeitstrahl/
                 </div>
             `;
 
-            // ROBUSTE ELEMENT-ERSTELLUNG:
-            // Wir verwenden einen temporären Container und querySelector, um das Haupt-Element zuverlässig zu extrahieren.
             const tempWrapper = document.createElement('div');
             tempWrapper.innerHTML = cardHtml;
-            const clickableCard = tempWrapper.querySelector('.event-card'); // Sicherstellen, dass das DIV und nicht ein Textknoten genommen wird.
+            const clickableCard = tempWrapper.querySelector('.event-card');
 
             if (clickableCard) {
                 clickableCard.addEventListener('click', () => showEventDetails(event));
@@ -384,15 +366,12 @@ permalink: /zeitstrahl/
         });
     }
 
-    // Event Listener für die Filter-Buttons (Existing logic, kept for completeness)
     document.querySelectorAll('.filter-btn').forEach(button => {
         button.addEventListener('click', (e) => {
             const filter = e.target.getAttribute('data-filter');
-            // Deaktiviere alle Buttons
             document.querySelectorAll('.filter-btn').forEach(btn =>
                 btn.classList.remove('bg-amber-700', 'bg-red-700', 'bg-blue-700', 'bg-green-700', 'bg-purple-700')
             );
-            // Aktiviere den geklickten Button
             if (filter === 'all') {
                 e.target.classList.add('bg-amber-700');
             } else if (filter === 'germany' || filter === 'history') {
@@ -407,10 +386,8 @@ permalink: /zeitstrahl/
         });
     });
 
-    // Starte die Zeitleiste beim Laden der Seite (zeigt "Alle" an) (Existing logic, kept for completeness)
     window.onload = function() {
         renderTimeline('all');
-        // Setze den "Alle anzeigen" Button als aktiv
         document.querySelector('[data-filter="all"]').classList.add('bg-amber-700');
     };
 </script>
