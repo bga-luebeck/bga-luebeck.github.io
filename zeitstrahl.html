@@ -154,10 +154,10 @@ permalink: /zeitstrahl/
                 <div class="bg-slate-800 p-6 rounded-lg shadow-xl hover:bg-slate-700 transition duration-300">
                     <h4 class="text-xl font-bold mb-2 text-amber-400">Stiftung Denkmal für die ermordeten Juden Europas</h4>
                     <p class="text-gray-400 text-sm mb-4">
-                        Homepage der Stiftung Denkmal.
+                        Links zu bedeutenden deutschen Gedenkstätten und Museumsstiftungen, einschließlich offizieller Dokumentation historischer Ereignisse.
                     </p>
                     <!-- NEUER LINK -->
-                    <a href="https://www.stiftung-denkmal.de/category/aktuelles/" target="_blank" class="text-blue-400 hover:text-blue-300 font-medium text-sm">Link zur Stiftung Denkmal &rarr;</a>
+                    <a href="https://www.stiftung-denkmal.de/category/aktuelles/" target="_blank" class="text-blue-400 hover:text-blue-300 font-medium text-sm">Ressourcen erkunden &rarr;</a>
                 </div>
 
                 <!-- Resource Card 2: Berichte über zeitgenössischen Antisemitismus -->
@@ -167,17 +167,17 @@ permalink: /zeitstrahl/
                         Zugang zu aktuellen Berichten und Statistiken über antisemitische Vorfälle in Deutschland und der EU.
                     </p>
                     <!-- NEUER LINK (RIAS - Recherche- und Informationsstelle Antisemitismus) -->
-                    <a href="https://report-antisemitism.de/" target="_blank" class="text-blue-400 hover:text-blue-300 font-medium text-sm">Link zu RIAS &rarr;</a>
+                    <a href="https://report-antisemitism.de/" target="_blank" class="text-blue-400 hover:text-blue-300 font-medium text-sm">Daten anzeigen &rarr;</a>
                 </div>
 
                 <!-- Resource Card 3: Bildungspartner -->
                 <div class="bg-slate-800 p-6 rounded-lg shadow-xl hover:bg-slate-700 transition duration-300">
                     <h4 class="text-xl font-bold mb-2 text-amber-400">Bildungspartner</h4>
                     <p class="text-gray-400 text-sm mb-4">
-                        Arolsen Archives - Das größte Archiv über Opfer und Überlebende des Nationalsozialismus.
+                        Organisationen, die sich dem Kampf gegen Holocaust-Leugnung und der Förderung von Toleranz weltweit widmen.
                     </p>
                     <!-- NEUER LINK (United States Holocaust Memorial Museum, internationale Quelle) -->
-                    <a href="https://arolsen-archives.org/" target="_blank" class="text-blue-400 hover:text-blue-300 font-medium text-sm">Link zu den Arolsen-Archives &rarr;</a>
+                    <a href="https://arolsen-archives.org/" target="_blank" class="text-blue-400 hover:text-blue-300 font-medium text-sm">Partner-Links &rarr;</a>
                 </div>
             </div>
         </section>
@@ -196,11 +196,13 @@ permalink: /zeitstrahl/
     </footer>
 
 <script>
-    // --- GEMINI API SICHERE KONFIGURATION FÜR NETLIFY PROXY ---
-    // Der Gemini API-Schlüssel wird nun NICHT MEHR im Frontend gespeichert.
-    // Die Anfragen werden an den sicheren Netlify Function Proxy weitergeleitet.
-    const PROXY_URL = '/.netlify/functions/gemini-proxy';
-    // Der System-Prompt und die Ziel-URL sind im Proxy (gemini-proxy.js) definiert.
+    // ⚠️ SICHERHEITSHINWEIS: DIES IST EXTREM UNSICHER FÜR EINE ÖFFENTLICHE LIVE-WEBSITE (Z.B. GITHUB PAGES)!
+    // Der API-Schlüssel ist im Quellcode sichtbar.
+    // DIESE KONFIGURATION NUR FÜR LOKALE ENTWICKLUNGSZWECKE VERWENDEN.
+
+    const GEMINI_API_KEY_LOCAL = "AIzaSyC75vex_qEbr4Jz4JSEuEstZ5Ajm0IO6xU";
+    const API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent";
+    const SYSTEM_PROMPT = "Du bist ein historischer Analytiker, spezialisiert auf die Geschichte des Antisemitismus und seine moderne Relevanz. Antworte in klarem, sachlichem Deutsch. Dein Ziel ist es, historische Zusammenhänge respektvoll und lehrreich zu erklären. Die Antwort sollte kurz und auf den Punkt sein (max. 4 Sätze).";
 
     // --- TIMELINE DATA (UNVERÄNDERT) ---
     const timelineData = [
@@ -228,9 +230,12 @@ permalink: /zeitstrahl/
 
     let currentEvent = null;
 
-    // --- LLM GENERATION FUNCTION (AKTUALISIERT FÜR PROXY) ---
+    // --- LLM GENERATION FUNCTION (DIREKTE API-ANBINDUNG) ---
     async function generateLlmInsight(eventType) {
-        if (!currentEvent) return;
+        if (!currentEvent || !GEMINI_API_KEY_LOCAL || GEMINI_API_KEY_LOCAL.includes("!!!")) {
+             document.getElementById('llm-output').innerHTML = '⚠️ **FEHLER:** Bitte fügen Sie Ihren API-Schlüssel in das Skript ein.';
+             return;
+        }
 
         const outputDiv = document.getElementById('llm-output');
         const eventTitle = currentEvent.title;
@@ -249,8 +254,22 @@ permalink: /zeitstrahl/
         `;
         document.querySelectorAll('.llm-btn').forEach(btn => btn.disabled = true);
 
+        // 2. Erzeuge die spezifische Nutzeranfrage
+        let finalUserQuery = '';
+        if (eventType === 'relevance') {
+            finalUserQuery = `Erkläre kurz (max. 4 Sätze), welche historischen Lektionen oder welche aktuelle Relevanz das Ereignis '${eventTitle}' vom ${eventDate} heute für den Kampf gegen Antisemitismus hat. Nutze Google Search Grounding für aktuelle Bezüge.`;
+        } else if (eventType === 'comparative') {
+            finalUserQuery = `Analysiere kurz (max. 4 Sätze), welche Mechanismen oder Muster des Antisemitismus im Ereignis '${eventTitle}' vom ${eventDate} sichtbar werden und ob es vergleichbare historische oder moderne Phänomene gibt. Nutze Google Search Grounding für aktuelle Bezüge.`;
+        }
 
-        // 2. Proxy Call mit Daten-Payload
+        // 3. API Payload erstellen
+        const payload = {
+            contents: [{ parts: [{ text: finalUserQuery }] }],
+            systemInstruction: { parts: [{ text: SYSTEM_PROMPT }] },
+            tools: [{ "google_search": {} }],
+        };
+
+        // 4. API Call mit Backoff
         const maxRetries = 3;
         let attempts = 0;
         let success = false;
@@ -258,14 +277,7 @@ permalink: /zeitstrahl/
 
         while (attempts < maxRetries && !success) {
             try {
-                // Sende nur die für die Analyse relevanten Daten an den Proxy
-                const payload = {
-                    eventTitle: eventTitle,
-                    eventDate: eventDate,
-                    eventType: eventType // 'relevance' or 'comparative'
-                };
-
-                const response = await fetch(PROXY_URL, {
+                const response = await fetch(`${API_URL}?key=${GEMINI_API_KEY_LOCAL}`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(payload)
@@ -273,24 +285,30 @@ permalink: /zeitstrahl/
 
                 if (response.ok) {
                     const result = await response.json();
-                    resultText = result.text || "FEHLER: Die KI konnte keine sinnvolle Antwort generieren.";
+                    const candidate = result.candidates?.[0];
+                    if (candidate && candidate.content?.parts?.[0]?.text) {
+                        resultText = candidate.content.parts[0].text;
+                    } else {
+                        resultText = "FEHLER: Die KI konnte keine sinnvolle Antwort generieren oder die Struktur der Antwort ist unerwartet.";
+                    }
                     success = true;
                 } else if (response.status === 429 && attempts < maxRetries - 1) {
                     // Behandle Ratenbegrenzung mit exponentiellem Backoff
                     const delay = Math.pow(2, attempts) * 1000;
                     await new Promise(resolve => setTimeout(resolve, delay));
                 } else {
-                    const errorJson = await response.json();
-                    throw new Error(`API-Fehler: ${response.status} ${errorJson.error || response.statusText}`);
+                    // Fehler aus der API oder dem Netzwerk
+                    const errorJson = await response.status === 500 ? {} : await response.json();
+                    throw new Error(`API-Fehler: ${response.status} ${errorJson.error?.message || response.statusText}`);
                 }
             } catch (error) {
-                resultText = `FEHLER: Die Verbindung zum Analyse-Tool ist fehlgeschlagen. (${error.message})`;
-                if (attempts === maxRetries - 1 || error.message.includes('API-Fehler')) break;
+                resultText = `FEHLER: Die Verbindung zur Gemini API ist fehlgeschlagen. (${error.message})`;
+                if (attempts === maxRetries - 1) break;
             }
             attempts++;
         }
 
-        // 3. Update UI with result
+        // 5. Update UI with result
         outputDiv.innerHTML = resultText;
         document.querySelectorAll('.llm-btn').forEach(btn => btn.disabled = false);
     }
