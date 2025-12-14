@@ -15,5 +15,5 @@ Wir gedenken an diesem Tag der Opfer dieser unmenschlichen Ideologie: den Jüdin
   <img src="{{ "/img/posts/deportation_1.jpg" | relative_url }}" alt="Gedenken Riga Bild 1" style="width: 100%; height: auto; border-radius: 4px;">
   <img src="{{ "/img/posts/deportation_2.jpg" | relative_url }}" alt="Gedenken Riga Bild 2" style="width: 100%; height: auto; border-radius: 4px;">
   <img src="{{ "/img/posts/deportation_3.jpg" | relative_url }}" alt="Gedenken Riga Bild 3" style="width: 100%; height: auto; border-radius: 4px;">
-  <img src="{{ "/img/posts/deportation_4.jpg" | relative_url }}" alt="Gedenken Riga Bild 4" style="width: 100%; height: auto; border-radius: 4px;">
+  <img src="{{ "/img/posts/deportation_4.png" | relative_url }}" alt="Gedenken Riga Bild 4" style="width: 100%; height: auto; border-radius: 4px;">
 </div>
