@@ -8,7 +8,7 @@ background: '/img/bga-logo.jpg'
 Hier finden Sie eine Übersicht der Veranstaltungen und Gedenktermine im Januar 2026.
 
 ### 📅 Samstag, 10. Januar 2026
-**Offener Filmabend „Tot in Lübeck“**
+**Offener Filmabend „Tod in Lübeck“**
 - **Zeit:** 18:00 - 20:00 Uhr
 - **Ort:** Geschichtserlebnisraum Roter Hahn e. V., Pommernring 58, 23569 Lübeck-Kücknitz
 - [📍 Auf Google Maps anzeigen](https://www.google.com/maps/search/?api=1&query=Pommernring+58,+23569+Lübeck)
