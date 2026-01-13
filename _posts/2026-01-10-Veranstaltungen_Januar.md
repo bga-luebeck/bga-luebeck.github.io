@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Veranstaltungen im Januar 2026"
-date: 2025-01-10 12:00:00 +0200
+date: 2026-01-10 12:00:00 +0200
 background: '/img/bga-logo.jpg'
 ---
 
