@@ -9,7 +9,7 @@ Die KIAS (Kritische Intervention Antisemitismus und Rassismus) lädt zu folgende
 
 ---
 
-### 📅 Dienstag, 10. Februar 2026
+### Dienstag, 10. Februar 2026
 **Vortrag mit Andreas Stahl: Antisemitismus-Definitionen im Vergleich**
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1rem 0;">
@@ -24,7 +24,7 @@ Andreas Stahl leitet die Zentrale Beratungsstelle gegen Antisemitismus an Hochsc
 
 ---
 
-### 📅 Samstag, 14. März 2026
+### Samstag, 14. März 2026
 **Soli-Trash-Party mit DJ Trasharchy**
 - **Zeit:** ab 22:00 Uhr
 - **Ort:** Café Brazil Walli, Willy-Brandt-Allee 9, 23554 Lübeck
@@ -42,7 +42,7 @@ Der Abend ist mehr als Eskapismus. Mit der Soliparty sichern wir die materielle 
 
 ---
 
-### 📅 Donnerstag, 19. März 2026
+### Donnerstag, 19. März 2026
 **Vortrag mit Florian Hessel: Derealisierung und Gewalt**
 - **Thema:** Konstellationen von Antisemitismus und „Antisemitismus-Debatte“ in der Gegenwart
 - **Zeit:** 19:00 Uhr
@@ -59,7 +59,7 @@ Am 19.03.2026 um 19 Uhr im Café Brazil spricht Florian Hessel, Sozialwissenscha
 
 ---
 
-### 📅 Donnerstag, 16. April 2026
+### Donnerstag, 16. April 2026
 **Buchvorstellung mit Nicholas Potter: „Die neue autoritäre Linke“**
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1rem 0;">
