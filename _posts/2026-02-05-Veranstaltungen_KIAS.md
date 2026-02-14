@@ -5,11 +5,11 @@ date: 2026-02-05 12:00:00 +0100
 background: '/img/bga-logo.jpg'
 ---
 
-Die KIAS (Kritische Intervention Antisemitismus und Rassismus) lädt zu folgenden Veranstaltungen im Frühjahr 2026 ein.
+Die KIAS (Kritische Intervention gegen Antisemitismus) lädt zu folgenden Veranstaltungen im Frühjahr 2026 ein.
 
 ---
 
-### Dienstag, 10. Februar 2026
+### Donnerstag, 21. Mai 2026
 **Vortrag mit Andreas Stahl: Antisemitismus-Definitionen im Vergleich**
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1rem 0;">
