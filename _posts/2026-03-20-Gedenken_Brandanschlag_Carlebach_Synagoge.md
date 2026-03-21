@@ -5,11 +5,11 @@ date: 2026-03-21 12:00:00 +0100
 background: '/img/bga-logo.jpg'
 ---
 
-<div style="background-color: #fdf2f2; border: 1px solid #d9534f; padding: 20px; border-radius: 8px; margin-bottom: 25px;">
-  <h2 style="margin-top: 0; color: #d9534f;">Aufruf zum Gedenken</h2>
+<div style="background-color: #f5f3f7; border: 1px solid #6f42c1; padding: 20px; border-radius: 8px; margin-bottom: 25px;">
+  <h2 style="margin-top: 0; color: #6f42c1;">Aufruf zum Gedenken</h2>
   <strong>Wann:</strong> Mittwoch, 25. März 2026, 16.00 – 18.00 Uhr<br>
   <strong>Wo:</strong> Vor der Synagoge, St. Annen-Straße 11-13, 23552 Lübeck<br>
-  <strong>Link:</strong> <a href="https://www.google.com/maps/search/?api=1&query=Synagoge+St.+Annen-Straße+11-13+Lübeck&query_place_id=ChIJyeT8lVsJskcRqA6KJwXEad8" target="_blank">Auf Google Maps anzeigen</a>
+  <strong>Link:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Synagoge+St.+Annen-Straße+11-13+Lübeck" target="_blank" style="color: #6f42c1; text-decoration: underline;">Auf Google Maps anzeigen</a>
 </div>
 
 ### Für jüdisches Leben - mitten in Lübeck und überall!
