@@ -32,7 +32,7 @@ In einer Zeit, in der antisemitische Straftaten – insbesondere seit den Ereign
 
 ### Blumen für die jüdische Gemeinde
 
-Ein besonderer Moment der diesjährigen Gedenkveranstaltung war die Aktion zwischen 16:00 und 18:00 Uhr. Unserem Aufruf folgend, brachten viele Menschen Schnittblumen zur Synagoge. Diese Zeichen der Verbundenheit zeigten deutlich: **Jüdisches Leben ist ein fester, unverzichtbarer und sichtbarer Teil unserer Stadt.**
+Unserem Aufruf folgend, brachten viele Menschen Schnittblumen zur Synagoge. Diese Zeichen der Verbundenheit zeigten deutlich: **Jüdisches Leben ist ein fester, unverzichtbarer und sichtbarer Teil unserer Stadt.**
 
 ### Dank an die Teilnehmenden
 
