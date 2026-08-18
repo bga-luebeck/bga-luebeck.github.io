@@ -32,11 +32,11 @@ layout: default
         <!-- Category Filter Bar -->
         <div class="category-filter-bar mb-4 pb-2 text-center text-md-left">
           <span class="small font-weight-bold text-muted mr-2 d-block d-sm-inline mb-2 mb-sm-0">Kategorien:</span>
-          <button class="cat-pill category-filter-btn active" data-category="all">Alle</button>
+          <button class="btn btn-sm btn-dark category-filter-btn active mr-1 mb-1" data-category="all">Alle</button>
           {% assign categories = site.posts | map: 'categories' | flatten | uniq %}
           {% for cat in categories %}
             {% if cat != empty %}
-              <button class="cat-pill category-filter-btn" data-category="{{ cat | slugify }}">{{ cat | capitalize }}</button>
+              <button class="btn btn-sm btn-outline-secondary category-filter-btn mr-1 mb-1" data-category="{{ cat | slugify }}">{{ cat | capitalize }}</button>
             {% endif %}
           {% endfor %}
         </div>
@@ -52,15 +52,15 @@ layout: default
 
           <article class="post-card-item {{ post_cats }} mb-4">
             <div class="card border-0 shadow-sm overflow-hidden post-card-hover">
-              <div class="row no-gutters align-items-stretch">
+              <div class="row no-gutters">
                 {% if post.background %}
-                <div class="col-md-5 col-lg-5 post-card-img-container">
-                  <a href="{{ post.url | relative_url }}" class="d-block h-100">
-                    <img src="{{ post.background | relative_url }}" alt="{{ post.title | escape }}" class="post-card-img">
+                <div class="col-md-5">
+                  <a href="{{ post.url | relative_url }}" class="post-card-img-link d-block h-100">
+                    <div class="post-card-img-bg" style="background-image: url('{{ post.background | relative_url }}');"></div>
                   </a>
                 </div>
                 {% endif %}
-                <div class="{% if post.background %}col-md-7 col-lg-7{% else %}col-12{% endif %}">
+                <div class="{% if post.background %}col-md-7{% else %}col-12{% endif %}">
                   <div class="card-body p-4 d-flex flex-column justify-content-between h-100">
                     <div>
                       {% if post.categories %}
