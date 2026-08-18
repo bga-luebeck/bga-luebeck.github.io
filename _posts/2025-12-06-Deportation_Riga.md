@@ -2,6 +2,7 @@
 layout: post
 title: "Gedenken an die Deportation nach Riga"
 date: 2025-12-06 12:00:00 +0200
+categories: Gedenken
 background: '/img/posts/deportation_1.jpg'
 ---
 

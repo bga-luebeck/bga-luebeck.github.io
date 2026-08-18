@@ -2,6 +2,7 @@
 layout: post
 title: "Veranstaltungen im Januar 2026"
 date: 2026-01-10 12:00:00 +0200
+categories: Veranstaltungen
 background: '/img/posts/bild2.jpg'
 ---
 

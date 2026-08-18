@@ -2,6 +2,7 @@
 layout: post
 title: "Einladung zum Mitmachen"
 date: 2025-03-30 21:48:00 +0200
+categories: Mitmachen
 background: '/img/posts/csd_2026_2.jpg'
 ---
 

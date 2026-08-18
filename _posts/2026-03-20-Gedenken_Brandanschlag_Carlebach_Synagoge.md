@@ -2,6 +2,7 @@
 layout: post
 title: "Aufruf zum Gedenken"
 date: 2026-03-21 12:00:00 +0100
+categories: Gedenken
 background: '/img/posts/Die_Synagoge_in_Lübeck_2021.jpg'
 ---
 

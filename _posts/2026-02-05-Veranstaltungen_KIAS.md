@@ -2,6 +2,7 @@
 layout: post
 title: "Veranstaltungen der KIAS im Frühjahr 2026"
 date: 2026-02-05 12:00:00 +0100
+categories: Veranstaltungen
 background: '/img/posts/KIAS_Party.jpg'
 ---
 

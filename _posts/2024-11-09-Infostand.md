@@ -3,6 +3,7 @@ layout: post
 title: "Infostand"
 subtitle:
 date: 2024-11-10 10:45:13 +0100
+categories: Rückblick
 background: '/img/posts/csd_2026_1.jpg'
 ---
 

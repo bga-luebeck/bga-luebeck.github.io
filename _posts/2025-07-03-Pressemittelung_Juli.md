@@ -2,6 +2,7 @@
 layout: post
 title: "Pressemitteilung des Bündnisses gegen Antisemitismus Lübeck"
 date: 2025-07-03 12:00:00 +0200
+categories: Pressemitteilung
 background: '/img/posts/bild2.jpg'
 ---
 
