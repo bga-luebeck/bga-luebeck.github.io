@@ -9,15 +9,15 @@ background: '/img/bga-logo.jpg'
 
 <article class="post-card-item mb-4">
   <div class="card border-0 shadow-sm overflow-hidden post-card-hover">
-    <div class="row no-gutters">
+    <div class="row no-gutters align-items-stretch">
       {% if post.background %}
-      <div class="col-md-5">
-        <a href="{{ post.url | relative_url }}" class="post-card-img-link d-block h-100">
-          <div class="post-card-img-bg" style="background-image: url('{{ post.background | relative_url }}');"></div>
+      <div class="col-md-5 col-lg-5 post-card-img-container">
+        <a href="{{ post.url | relative_url }}" class="d-block h-100">
+          <img src="{{ post.background | relative_url }}" alt="{{ post.title | escape }}" class="post-card-img">
         </a>
       </div>
       {% endif %}
-      <div class="{% if post.background %}col-md-7{% else %}col-12{% endif %}">
+      <div class="{% if post.background %}col-md-7 col-lg-7{% else %}col-12{% endif %}">
         <div class="card-body p-4 d-flex flex-column justify-content-between h-100">
           <div>
             {% if post.categories %}
