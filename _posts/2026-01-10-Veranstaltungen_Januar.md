@@ -2,7 +2,7 @@
 layout: post
 title: "Veranstaltungen im Januar 2026"
 date: 2026-01-10 12:00:00 +0200
-background: '/img/bga-logo.jpg'
+background: '/img/posts/bild2.jpg'
 ---
 
 Hier finden Sie eine Übersicht der Veranstaltungen und Gedenktermine im Januar 2026.

@@ -3,7 +3,7 @@ layout: post
 title: "Mahnwache"
 subtitle: "Für die Geiseln und Opfer des Terrors vom 07.10.2023"
 date: 2024-10-06 12:00:00 +0200 # Corrected offset to +0200 for CEST in October
-background: '/img/bga-logo.jpg'
+background: '/img/posts/signal-2025-10-07-20-25-15-396.jpg'
 ---
 
 Liebe Mitbürgerinnen und Mitbürger,

@@ -2,6 +2,9 @@
 layout: default
 ---
 
+<!-- Reading Progress Bar -->
+<div id="reading-progress"></div>
+
 <!-- Page Header -->
 {% if page.background %}
 <header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
@@ -19,7 +22,7 @@ layout: default
             {% endif %}
             <span class="meta">Verfasst von
               <a href="#">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a>
-              am {{ page.date | date: '%d. %B, %Y' }} &middot; {% include read_time.html
+              am {% include german_date.html date=page.date %} &middot; {% include read_time.html
               content=page.content %}
             </span>
           </div>
@@ -32,18 +35,28 @@ layout: default
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
 
-        {{ content }}
+        <article class="post-content">
+          {{ content }}
+        </article>
+
+        <!-- Social Share Bar -->
+        <div class="post-share-box text-center my-4 py-3 bg-light rounded shadow-sm">
+          <span class="font-weight-bold mr-2 text-secondary">Diesen Beitrag teilen:</span>
+          <button class="btn btn-sm btn-primary rounded-pill px-3 shadow-sm" id="webShareBtn" data-title="{{ page.title | escape }}" data-url="{{ page.url | absolute_url }}">
+            <i class="fa fa-share-alt mr-1"></i> Teilen
+          </button>
+        </div>
 
         <hr>
 
         <div class="clearfix">
 
           {% if page.previous.url %}
-          <a class="btn btn-primary float-left" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">&larr; Vorheriger<span class="d-none d-md-inline">
+          <a class="btn btn-primary float-left rounded-pill shadow-sm" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">&larr; Vorheriger<span class="d-none d-md-inline">
               Beitrag</span></a>
           {% endif %}
           {% if page.next.url %}
-          <a class="btn btn-primary float-right" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Nächster<span class="d-none d-md-inline">
+          <a class="btn btn-primary float-right rounded-pill shadow-sm" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Nächster<span class="d-none d-md-inline">
               Beitrag</span> &rarr;</a>
           {% endif %}
 
@@ -52,3 +65,16 @@ layout: default
       </div>
     </div>
   </div>
+
+  <!-- Image Lightbox Modal -->
+  <div class="modal fade" id="imageLightboxModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-body text-center p-0">
+          <img src="" id="lightboxImg" class="img-fluid rounded shadow-lg" alt="Grossansicht">
+          <p id="lightboxCaption" class="text-white mt-2 small"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+

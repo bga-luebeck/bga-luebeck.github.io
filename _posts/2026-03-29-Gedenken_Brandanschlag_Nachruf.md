@@ -2,8 +2,8 @@
 layout: post
 title: "Rückblick: Ein Zeichen der Solidarität – Gedenken an den Brandanschlag"
 date: 2026-03-29 12:00:00 +0100
-categories: rückblick
-background: '/img/bga-logo.jpg'
+categories: Rückblick
+background: '/img/posts/brandanschlag_synagoge_1.png'
 ---
 
 <p class="lead">Am 25. März versammelten sich zahlreiche Bürgerinnen und Bürger vor der Carlebach Synagoge in der St. Annenstraße, um ein Zeichen gegen das Vergessen und für jüdisches Leben in Lübeck zu setzen. 32 Jahre nach dem ersten Brandanschlag auf ein jüdisches Gotteshaus in Deutschland nach 1945 bleibt die Mahnung aktueller denn je.</p>

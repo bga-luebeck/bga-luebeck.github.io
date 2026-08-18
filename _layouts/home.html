@@ -23,44 +23,81 @@ layout: default
     </div>
   </header>
 
-  <div class="container">
+  <div class="container my-4">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
 
         {{ content }}
 
-        <!-- Home Post List -->
-        {% for post in site.posts limit : 5 %}
-
-        <article class="post-preview">
-          <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-            <h2 class="post-title">{{ post.title }}</h2>
-            {% if post.subtitle %}
-            <h3 class="post-subtitle">{{ post.subtitle }}</h3>
-            {% else %}
-            <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
+        <!-- Category Filter Bar -->
+        <div class="category-filter-bar mb-4 pb-2 text-center text-md-left">
+          <span class="small font-weight-bold text-muted mr-2 d-block d-sm-inline mb-2 mb-sm-0">Kategorien:</span>
+          <button class="btn btn-sm btn-dark category-filter-btn active mr-1 mb-1" data-category="all">Alle</button>
+          {% assign categories = site.posts | map: 'categories' | flatten | uniq %}
+          {% for cat in categories %}
+            {% if cat != empty %}
+              <button class="btn btn-sm btn-outline-secondary category-filter-btn mr-1 mb-1" data-category="{{ cat | slugify }}">{{ cat | capitalize }}</button>
             {% endif %}
-          </a>
-          <p class="post-meta">Verfasst von
-            {% if post.author %}
-            {{ post.author }}
-            {% else %}
-            {{ site.author }}
-            {% endif %}
-            am
-            {{ post.date | date: '%d. %B, %Y' }} &middot; {% include read_time.html content=post.content %}
-          </p>
-        </article>
+          {% endfor %}
+        </div>
 
-        <hr>
+        <!-- Home Post List (Cards) -->
+        <div class="post-cards-wrapper">
+          {% for post in site.posts limit : 5 %}
+          {% assign post_cats = "" %}
+          {% for cat in post.categories %}
+            {% assign cat_slug = cat | slugify %}
+            {% assign post_cats = post_cats | append: " cat-" | append: cat_slug %}
+          {% endfor %}
 
-        {% endfor %}
+          <article class="post-card-item {{ post_cats }} mb-4">
+            <div class="card border-0 shadow-sm overflow-hidden post-card-hover">
+              <div class="row no-gutters">
+                {% if post.background %}
+                <div class="col-md-5">
+                  <a href="{{ post.url | relative_url }}" class="post-card-img-link d-block h-100">
+                    <div class="post-card-img-bg" style="background-image: url('{{ post.background | relative_url }}');"></div>
+                  </a>
+                </div>
+                {% endif %}
+                <div class="{% if post.background %}col-md-7{% else %}col-12{% endif %}">
+                  <div class="card-body p-4 d-flex flex-column justify-content-between h-100">
+                    <div>
+                      {% if post.categories %}
+                      <div class="mb-2">
+                        {% for cat in post.categories %}
+                        <span class="badge badge-pill badge-primary px-2 py-1 small font-weight-normal">{{ cat | capitalize }}</span>
+                        {% endfor %}
+                      </div>
+                      {% endif %}
+                      <h2 class="card-title h4 font-weight-bold mb-2">
+                        <a href="{{ post.url | relative_url }}" class="text-dark post-title-link">{{ post.title }}</a>
+                      </h2>
+                      <p class="card-text text-muted small mb-3">
+                        {% if post.subtitle %}
+                        {{ post.subtitle }}
+                        {% else %}
+                        {{ post.excerpt | strip_html | truncatewords: 20 }}
+                        {% endif %}
+                      </p>
+                    </div>
+                    <div class="post-meta small text-muted pt-2 border-top">
+                      <span>{% include german_date.html date=post.date %}</span> &middot; {% include read_time.html content=post.content %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          {% endfor %}
+        </div>
 
         <!-- Pager -->
-        <div class="clearfix">
-          <a class="btn btn-primary float-right" href="{{"/posts" | relative_url }}">Alle Beiträge ansehen &rarr;</a>
+        <div class="clearfix mt-4">
+          <a class="btn btn-primary float-right rounded-pill shadow-sm" href="{{"/posts" | relative_url }}">Alle Beiträge ansehen &rarr;</a>
         </div>
 
       </div>
     </div>
   </div>
+

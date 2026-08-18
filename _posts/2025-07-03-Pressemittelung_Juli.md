@@ -2,7 +2,7 @@
 layout: post
 title: "Pressemitteilung des Bündnisses gegen Antisemitismus Lübeck"
 date: 2025-07-03 12:00:00 +0200
-background: '/img/bga-logo.jpg'
+background: '/img/posts/bild2.jpg'
 ---
 
 <iframe src="/pdf/Pressemitteilung_Juli_2025.pdf" width="100%" height="1100px" style="border: none;">

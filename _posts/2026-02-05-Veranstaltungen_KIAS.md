@@ -2,7 +2,7 @@
 layout: post
 title: "Veranstaltungen der KIAS im Frühjahr 2026"
 date: 2026-02-05 12:00:00 +0100
-background: '/img/bga-logo.jpg'
+background: '/img/posts/KIAS_Party.jpg'
 ---
 
 Die KIAS (Kritische Intervention gegen Antisemitismus) lädt zu folgenden Veranstaltungen im Frühjahr 2026 ein.

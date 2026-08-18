@@ -2,7 +2,7 @@
 layout: post
 title: "Aufruf zum Gedenken"
 date: 2026-03-21 12:00:00 +0100
-background: '/img/bga-logo.jpg'
+background: '/img/posts/Die_Synagoge_in_Lübeck_2021.jpg'
 ---
 
 <div style="background-color: #f5f3f7; border: 1px solid #6f42c1; padding: 20px; border-radius: 8px; margin-bottom: 25px;">

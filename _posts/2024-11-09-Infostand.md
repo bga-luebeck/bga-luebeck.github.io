@@ -3,7 +3,7 @@ layout: post
 title: "Infostand"
 subtitle:
 date: 2024-11-10 10:45:13 +0100
-background: '/img/bga-logo.jpg'
+background: '/img/posts/csd_2026_1.jpg'
 ---
 
 Am 9. November haben wir mit einem Infostand an die Reichsprogromnacht 1938 erinnert und über Antisemitismus und seine Erscheinungsformen informiert.

@@ -4,6 +4,8 @@
 
 // 1. Custom Link Styles
 // Makes links in posts more visible and interactive.
+// 1. Custom Link Styles
+// Makes links in posts more visible and interactive.
 .post-content a, .page-content a {
   color: #0056b3; // A standard, accessible blue
   text-decoration: underline;
@@ -16,21 +18,124 @@
 }
 
 // 2. Centered Image Figure
-// A reusable class for centering images and their captions.
 .figure-center {
   text-align: center;
-  margin: 2em 0; // Add some vertical space around the figure
+  margin: 2em 0;
 
   img {
     max-width: 100%;
     height: auto;
-    border-radius: 4px; // Slightly rounded corners for a softer look
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); // A subtle shadow for depth
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
 
   figcaption {
     margin-top: 0.8em;
     font-size: 0.9em;
-    color: #6c757d; // A muted color for the caption text
+    color: #6c757d;
+  }
+}
+
+// 3. Reading Progress Bar (Fixed Top)
+#reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background-color: #0085a1; // Clean blog primary accent blue
+  width: 0%;
+  z-index: 1050;
+  transition: width 0.1s ease-out;
+}
+
+// 4. Post Preview Cards (Modern Layout)
+.post-card-hover {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  border-radius: 12px !important;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+  }
+}
+
+.post-card-img-bg {
+  min-height: 200px;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+
+  @media (max-width: 767.98px) {
+    height: 180px;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 12px;
+  }
+}
+
+.post-title-link {
+  text-decoration: none;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: #0085a1 !important;
+    text-decoration: none;
+  }
+}
+
+// 5. Category Filters
+.category-filter-btn {
+  border-radius: 20px;
+  padding: 0.25rem 0.8rem;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+// 6. Clickable Lightbox Images
+.img-clickable {
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    opacity: 0.93;
+    transform: scale(1.01);
+  }
+}
+
+// 7. Mobile Reading & Touch Optimization
+@media (max-width: 767.98px) {
+  body {
+    font-size: 1.05rem;
+    line-height: 1.65;
+  }
+
+  .btn {
+    min-height: 44px; // Touch target size
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-brand {
+    font-size: 1rem;
+  }
+}
+
+// 8. Desktop Navigation Bar Size
+@media (min-width: 992px) {
+  #mainNav {
+    .navbar-brand {
+      font-size: 1.25rem;
+      font-weight: 800;
+    }
+
+    .navbar-nav > li.nav-item > a {
+      font-size: 0.95rem; // Up from 12px (~15px)
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      padding: 12px 16px;
+    }
   }
 }
