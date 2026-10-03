@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "3 Jahre nach dem Massaker der Hamas auf Israel: Gedenken an die Opfer"
+title: "3 Jahre nach dem Massaker der Hamas in Israel: Gedenken an die Opfer"
 subtitle: "Mahnwache vor der Carlebach Synagoge Lübeck am 7. Oktober 2026"
 date: 2026-10-03 12:00:00 +0200
 categories: Gedenken
 background: '/img/posts/Die_Synagoge_in_Lübeck_2021.jpg'
 ---
 
-<p class="lead">Drei Jahre nach dem verheerenden Überfall der radikal-islamistischen Terrororganisation Hamas und des Palästinensischen Islamischen Jihad auf Israel ruft das Bündnis gegen Antisemitismus Lübeck zum gemeinsamen Gedenken an die Opfer vor der Carlebach Synagoge Lübeck auf.</p>
+<p class="lead">Drei Jahre nach dem verheerenden Überfall der radikal-islamistischen Terrororganisation Hamas und des Palästinensischen Islamischen Jihad in Israel ruft das Bündnis gegen Antisemitismus Lübeck zum gemeinsamen Gedenken an die Opfer vor der Carlebach Synagoge Lübeck auf.</p>
 
 ---
 
@@ -25,7 +25,7 @@ Am **Mittwoch, 7. Oktober 2026, von 17:30 bis 19:00 Uhr** kommen wir vor der Car
 
 ### Wir vergessen nicht
 
-Am dritten Jahrestag des Überfalls, den die radikal-islamistische Terrororganisation Hamas gemeinsam mit dem Palästinensischen Islamischen Jihad am 7. Oktober 2023 von Gaza aus auf Israel verübte, gedenken wir der Ermordeten. Es war das größte Massaker und Verbrechen gegen die Menschlichkeit an Jüdinnen und Juden seit dem Holocaust.
+Am dritten Jahrestag des Überfalls, den die radikal-islamistische Terrororganisation Hamas gemeinsam mit dem Palästinensischen Islamischen Jihad am 7. Oktober 2023 von Gaza aus in Israel verübte, gedenken wir der Ermordeten. Es war das größte Massaker und Verbrechen gegen die Menschlichkeit an Jüdinnen und Juden seit dem Holocaust.
 
 Unter den 1.195 Toten und den über 5.000 teils schwer Verletzten waren auch Beduinen, Palästinenser:innen und 79 Ausländer:innen. 251 Geiseln wurden nach Gaza verschleppt, gefoltert, vergewaltigt oder ermordet. 30 Geiseln waren deutsche Staatsangehörige. Zehn von ihnen wurden ermordet, darunter das Kleinkind Kfir Bibas (10 Monate), Ariel Bibas (4) und ihre Mutter Shiri (32).
 
@@ -33,7 +33,7 @@ Unter den 1.195 Toten und den über 5.000 teils schwer Verletzten waren auch Bed
 
 Der Überfall traf besonders die Kibbuzim Re‘im, Be‘eri, Nir Oz und Kfar Aza. Mitglieder der Kibbuzbewegung setzen sich seit langem für die Koexistenz von Palästinensern und Israelis ein. Viele engagieren sich in der Protestbewegung gegen die Regierung unter Führung von Benjamin Netanjahu. Vor dem Pogrom vom 7. Oktober gab es gute Kontakte zu Bewohner:innen des Gazastreifens.
 
-Um 6:29 Uhr heulten am jüdischen Feiertag der Torafreude (Simchat Tora) die Sirenen im Süden Israels. Schon in den ersten Stunden feuerte die Hamas nach eigenen Angaben 5.000 Raketen auf israelisches Staatsgebiet ab. Tausende Kämpfer und bewaffnete Zivilisten aus Gaza durchbrachen den Grenzzaun und fielen mit äußerster Brutalität über die Dörfer und die jungen Menschen her, die an diesem Wochenende zu einem Tanzfestival gekommen waren.
+Um 6:29 Uhr heulten am jüdischen Feiertag der Torafreude (Simchat Tora) die Sirenen im Süden Israels. Schon in den ersten Stunden feuerte die Hamas nach eigenen Angaben 5.000 Raketen in israelisches Staatsgebiet ab. Tausende Kämpfer und bewaffnete Zivilisten aus Gaza durchbrachen den Grenzzaun und fielen mit äußerster Brutalität über die Dörfer und die jungen Menschen her, die an diesem Wochenende zu einem Tanzfestival gekommen waren.
 
 Die Mörder feierten ihre Verbrechen mit frenetischem Jubel, filmten sie und stellten sie umgehend ins Internet. Mit der arabischen Bezeichnung „Operation al-Aqsa-Flut“ stellten sie ihren Plan, Israel zu vernichten, bewusst in einen religiösen Kontext.
 
@@ -66,7 +66,7 @@ Ausgrenzung, Diskriminierung und Hetze schaden uns allen. Sie treffen auch Musli
 <div class="row my-4">
   <div class="col-md-6 mb-3">
     <figure class="text-center">
-      <img src="/img/posts/Flyer_07_10_26-1.png" alt="Flyer: 3 Jahre nach dem Massaker der Hamas auf Israel: Gedenken an die Opfer (Vorderseite)" class="img-fluid rounded shadow-sm border">
+      <img src="/img/posts/Flyer_07_10_26-1.png" alt="Flyer: 3 Jahre nach dem Massaker der Hamas in Israel: Gedenken an die Opfer (Vorderseite)" class="img-fluid rounded shadow-sm border">
       <figcaption class="text-muted mt-2"><small><i>Flyer Vorderseite (Klicken zum Vergrößern)</i></small></figcaption>
     </figure>
   </div>
