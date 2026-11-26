@@ -2,8 +2,20 @@
 // Custom styles for the BGA Lübeck website
 //
 
-// 1. Custom Link Styles
-// Makes links in posts more visible and interactive.
+// 0. Global Typography (Helvetica Neue)
+html,
+body,
+h1, h2, h3, h4, h5, h6,
+p, a, li, blockquote, figcaption,
+button, input, optgroup, select, textarea,
+.btn, #mainNav, .navbar, .card, .badge, .tooltip, .popover,
+header.masthead .page-heading .subheading,
+header.masthead .site-heading .subheading,
+header.masthead .post-heading .subheading,
+header.masthead .post-heading .meta {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 // 1. Custom Link Styles
 // Makes links in posts more visible and interactive.
 .post-content a, .page-content a {
